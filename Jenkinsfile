@@ -1,6 +1,6 @@
 pipeline {
       environment { 
-        registry = "nikhilraj50005/football-standing" 
+        registry = "nikhilraj50005/football-standings" 
         registryCredential = 'nikhilraj50005'
         dockerImage = '' 
     }
@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage ('Initialize') {
             steps {
-                git 'https://github.com/nikhilraj5005/footballStanding.git'
+                git 'https://github.com/nikhilraj5005/footballStandings.git'
                 bat '''
                     echo "PATH = ${PATH}"
                     echo "M2_HOME = ${M2_HOME}"
