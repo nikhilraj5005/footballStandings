@@ -18,13 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/service/v1/team/standing")
 public class FootBallStandingController {
 
-  private final TeamStandingService teamStandingService;
-
   @Autowired
-  public FootBallStandingController(
-      TeamStandingService teamStandingService) {
-    this.teamStandingService = teamStandingService;
-  }
+  TeamStandingService teamStandingService;
 
   @GetMapping
   public ResponseEntity<TeamStandingDto> getStandings(@Valid TeamStandingRequest teamStandingRequest) {

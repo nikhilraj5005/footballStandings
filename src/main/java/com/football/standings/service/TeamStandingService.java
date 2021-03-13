@@ -22,12 +22,8 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class TeamStandingService {
 
-  private final TeamStandingRestClient teamStandingRestClient;
-
   @Autowired
-  public TeamStandingService(TeamStandingRestClient teamStandingRestClient) {
-    this.teamStandingRestClient = teamStandingRestClient;
-  }
+  TeamStandingRestClient teamStandingRestClient;
 
   public TeamStandingDto getTeamStanding(TeamStandingRequest teamStandingRequest) {
     //Validate the request
